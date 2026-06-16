@@ -1,0 +1,30 @@
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+const year = document.querySelector('[data-year]');
+if (year) year.textContent = new Date().getFullYear();
+
+const sections = [...document.querySelectorAll('section[id]')];
+const navItems = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+const activate = () => {
+  const pos = window.scrollY + 130;
+  let current = sections[0]?.id;
+  for (const section of sections) {
+    if (section.offsetTop <= pos) current = section.id;
+  }
+  navItems.forEach((item) => item.classList.toggle('active', item.getAttribute('href') === `#${current}`));
+};
+window.addEventListener('scroll', activate, { passive: true });
+activate();

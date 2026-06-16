@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart e-Archive System — Case Study | Ibrahim Almasri</title>
+  <meta name="description" content="Smart e-Archive System case study: Laravel 12 API-first document management, OCR, approval workflow, classification, and search.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="../index.html"><span class="logo-mark">IA</span><span>Ibrahim Almasri</span></a>
+      <div class="nav-actions"><a class="btn-secondary" href="../files/IbrahimCVPlus26.pdf" target="_blank" rel="noopener">Download CV</a></div>
+    </div>
+  </header>
+  <main class="project-page">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html#projects">Projects</a><span>/</span><span>Smart e-Archive System</span></div>
+      <div class="section-head">
+        <div>
+          <p class="section-label">Case Study</p>
+          <h1>Smart e-Archive System</h1>
+          <p class="hero-subtitle">API-first document archiving backend for organizations that need structured storage, permissions, approval workflows, OCR extraction, and searchable archives.</p>
+        </div>
+      </div>
+      <div class="case-grid">
+        <div class="case-main">
+          <section class="card">
+            <h2>Overview</h2>
+            <p>The system is built as a Laravel 12 backend focused on document lifecycle management. It supports authentication, organization and department scopes, role-based authorization, document upload and retrieval, workflow history, OCR extraction, and search.</p>
+          </section>
+          <section class="card">
+            <h2>Problem</h2>
+            <p>Organizations often store documents in scattered folders without clear ownership, approval status, access rules, or searchable extracted text. This makes document retrieval slow and creates operational risk.</p>
+          </section>
+          <section class="card">
+            <h2>Solution</h2>
+            <ul class="case-list">
+              <li>API-first backend under protected REST endpoints.</li>
+              <li>Role-based access for SuperAdmin, Admin, Manager, Employee, and Auditor.</li>
+              <li>Organization and department-aware document access.</li>
+              <li>Document workflow states: pending, under review, approved, rejected, archived.</li>
+              <li>OCR extraction for image and PDF documents using Tesseract and PDF-to-image conversion.</li>
+              <li>Rule-based document classification into invoices, contracts, reports, official letters, IDs, receipts, certificates, legal documents, and other types.</li>
+              <li>Keyword search with optional hybrid semantic search when embeddings are configured.</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>Architecture Snapshot</h2>
+            <div class="diagram">
+              <div class="diagram-row"><span class="node">Client / API Consumer</span><span class="arrow">→</span><span class="node">Laravel API Routes</span><span class="arrow">→</span><span class="node">Controllers</span></div>
+              <div class="diagram-row"><span class="node">Requests / DTOs</span><span class="arrow">→</span><span class="node">Services</span><span class="arrow">→</span><span class="node">Repositories</span><span class="arrow">→</span><span class="node">Models / Storage</span></div>
+              <div class="diagram-row"><span class="node">OCR Service</span><span class="arrow">→</span><span class="node">Content Store</span><span class="arrow">→</span><span class="node">Search / Classification</span></div>
+            </div>
+          </section>
+          <section class="card">
+            <h2>My Role</h2>
+            <ul class="case-list">
+              <li>Designed backend modules for authentication, organizations, departments, documents, workflow, OCR, and search.</li>
+              <li>Implemented request validation, service classes, repository abstractions, models, and API endpoints.</li>
+              <li>Prepared project documentation and setup instructions.</li>
+              <li>Added tests around authentication, authorization, workflow, classification, search, OCR normalization, and content storage behavior.</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>Result</h2>
+            <p>The project demonstrates a scalable backend structure for document-heavy organizations and shows practical experience with Laravel, API design, access control, workflow modeling, OCR, and search.</p>
+          </section>
+        </div>
+        <aside class="case-side">
+          <div class="card">
+            <h3>Tech Stack</h3>
+            <div class="stack-cloud"><span class="tag">PHP 8.2+</span><span class="tag">Laravel 12</span><span class="tag">Sanctum</span><span class="tag">Tesseract OCR</span><span class="tag">REST API</span><span class="tag">SQLite/MySQL</span><span class="tag">Ollama optional</span><span class="tag">MongoDB optional</span></div>
+          </div>
+          <div class="card mini-stat">
+            <div><strong>5</strong><span>Main roles</span></div>
+            <div><strong>5</strong><span>Workflow states</span></div>
+            <div><strong>10</strong><span>Document types</span></div>
+            <div><strong>API</strong><span>First design</span></div>
+          </div>
+          <a class="btn" href="https://github.com/Ibrahimalmari/smart-archive" target="_blank" rel="noopener">View GitHub Repository</a>
+          <a class="btn-ghost" href="../index.html#projects">Back to Projects</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

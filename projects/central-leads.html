@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Leads Management System — Case Study | Ibrahim Almasri</title>
+  <meta name="description" content="Central Leads Management System case study: Laravel and Filament dashboard for collecting leads from multiple external websites via a secure API.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="../index.html"><span class="logo-mark">IA</span><span>Ibrahim Almasri</span></a>
+      <div class="nav-actions"><a class="btn-secondary" href="../files/IbrahimCVPlus26.pdf" target="_blank" rel="noopener">Download CV</a></div>
+    </div>
+  </header>
+  <main class="project-page">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html#projects">Projects</a><span>/</span><span>Central Leads Management System</span></div>
+      <div class="section-head">
+        <div>
+          <p class="section-label">Case Study</p>
+          <h1>Central Leads Management System</h1>
+          <p class="hero-subtitle">A Laravel MVP for collecting form submissions from multiple websites through a central API and managing them in a Filament admin dashboard.</p>
+        </div>
+      </div>
+      <div class="case-grid">
+        <div class="case-main">
+          <section class="card">
+            <h2>Overview</h2>
+            <p>This project centralizes leads from different websites and forms into one dashboard. Each external website can submit leads through a secure API key, while the admin panel organizes companies, sites, forms, leads, logs, and pipeline stages.</p>
+          </section>
+          <section class="card">
+            <h2>Problem</h2>
+            <p>Businesses with many websites often receive form submissions in separate inboxes or plugins. This causes duplicated work, missed leads, unclear sources, and weak reporting.</p>
+          </section>
+          <section class="card">
+            <h2>Solution</h2>
+            <ul class="case-list">
+              <li>Central Laravel API endpoint for incoming website forms.</li>
+              <li>API key authentication using Bearer token or X-API-Key header.</li>
+              <li>Support for multiple companies, websites, and forms.</li>
+              <li>Filament admin dashboard with Arabic and English support.</li>
+              <li>Lead pipeline, notes, activities, API submission logs, and login attempt tracking.</li>
+              <li>Lead exporting and email testing for cPanel deployment.</li>
+              <li>Integration documentation for PHP, WordPress, and Laravel websites.</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>Integration Flow</h2>
+            <div class="diagram">
+              <div class="diagram-row"><span class="node">Website Form</span><span class="arrow">→</span><span class="node">API Key</span><span class="arrow">→</span><span class="node">POST /api/leads</span></div>
+              <div class="diagram-row"><span class="node">Validation</span><span class="arrow">→</span><span class="node">Lead Storage</span><span class="arrow">→</span><span class="node">Filament Dashboard</span></div>
+              <div class="diagram-row"><span class="node">Notifications</span><span class="arrow">→</span><span class="node">Pipeline</span><span class="arrow">→</span><span class="node">Analytics / Export</span></div>
+            </div>
+          </section>
+          <section class="card">
+            <h2>My Role</h2>
+            <ul class="case-list">
+              <li>Designed the MVP structure for multi-site lead collection.</li>
+              <li>Built Filament resources for companies, forms, leads, logs, and dashboard pages.</li>
+              <li>Implemented secure API submission using site API keys.</li>
+              <li>Prepared integration examples and cPanel deployment notes.</li>
+              <li>Added multilingual Arabic/English admin panel support.</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>Result</h2>
+            <p>The system provides a practical foundation for lead tracking across multiple websites, replacing scattered inbox-based workflows with a central dashboard and secure integration layer.</p>
+          </section>
+        </div>
+        <aside class="case-side">
+          <div class="card">
+            <h3>Tech Stack</h3>
+            <div class="stack-cloud"><span class="tag">PHP 8.2+</span><span class="tag">Laravel 12</span><span class="tag">Filament 5.6</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">cPanel</span><span class="tag">SMTP</span><span class="tag">Arabic/English</span></div>
+          </div>
+          <div class="card mini-stat">
+            <div><strong>API</strong><span>Central intake</span></div>
+            <div><strong>Multi</strong><span>Websites/forms</span></div>
+            <div><strong>2</strong><span>Languages</span></div>
+            <div><strong>Admin</strong><span>Dashboard</span></div>
+          </div>
+          <a class="btn-ghost" href="../index.html#projects">Back to Projects</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
