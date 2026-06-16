@@ -1,3 +1,17 @@
+const cleanCurrentUrl = () => {
+  if (window.location.protocol === 'file:') return;
+
+  const { pathname, search, hash } = window.location;
+  if (!pathname.endsWith('.html') || pathname.endsWith('/404.html')) return;
+
+  const cleanPath = pathname.endsWith('/index.html')
+    ? pathname.slice(0, -'index.html'.length)
+    : pathname.replace(/\.html$/, '/');
+
+  window.history.replaceState(null, '', `${cleanPath}${search}${hash}`);
+};
+cleanCurrentUrl();
+
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 if (menuBtn && navLinks) {

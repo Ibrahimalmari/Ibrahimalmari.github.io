@@ -1,8 +1,8 @@
-# Ibrahim Almasri Portfolio — GitHub Pages
+# Ibrahim Almasri Portfolio
 
-Static portfolio website ready for GitHub Pages.
+Static portfolio website.
 
-## Deploy on GitHub Pages
+## Deploy
 
 1. Create a new public repository named exactly:
 
@@ -12,9 +12,7 @@ Static portfolio website ready for GitHub Pages.
 
 2. Upload all files from this folder to the repository root.
 
-3. Go to:
-
-   `Settings → Pages → Build and deployment → Source: Deploy from a branch`
+3. Go to the repository Pages settings.
 
 4. Select:
 
@@ -36,4 +34,4 @@ Your website should be available at:
 
 ## Notes
 
-This website is static, so it does not require PHP, Laravel, MySQL, Node.js, or hosting. It works directly on GitHub Pages.
+This website is static, so it does not require PHP, Laravel, MySQL, Node.js, or a server-side runtime.
