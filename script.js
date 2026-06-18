@@ -32,8 +32,9 @@ if (year) year.textContent = new Date().getFullYear();
 
 const sections = [...document.querySelectorAll('section[id]')];
 const navItems = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+const headerOffset = document.querySelector('.site-header')?.offsetHeight || 0;
 const activate = () => {
-  const pos = window.scrollY + 130;
+  const pos = window.scrollY + headerOffset + 180;
   let current = sections[0]?.id;
   for (const section of sections) {
     if (section.offsetTop <= pos) current = section.id;
